@@ -1,0 +1,60 @@
+{
+  "name": "makefiles",
+  "version": "0.0.1",
+  "description": "makefiles for nodejs",
+  "keywords": [
+    "makefiles",
+    "make",
+    "node",
+    "nodejs",
+    "javascript",
+    "typescript",
+    "js",
+    "ts"
+  ],
+  "homepage": "https://github.com/codejamninja/makefiles",
+  "bugs": {
+    "url": "https://github.com/codejamninja/makefiles/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "makefiles.mk"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/makefiles"
+  },
+  "scripts": {
+    "build": "make -s build",
+    "clean": "make -s clean",
+    "coverage": "make -s coverage",
+    "format": "make -s format",
+    "lint": "make -s lint",
+    "prepare": "make -s prepare",
+    "purge": "make -s purge",
+    "report": "make -s report",
+    "spellcheck": "make -s spellcheck",
+    "start": "make -s start",
+    "test": "make -s test",
+    "test:ui": "make test-ui",
+    "test:watch": "make -s test-watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cspell": "^4.0.57",
+    "jest": "^25.5.2",
+    "jest-sonar-reporter": "^2.0.0",
+    "lockfile-lint": "^4.2.2",
+    "prettier": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

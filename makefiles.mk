@@ -34,3 +34,7 @@ endef
 define get_deps
 	cat $(MAKE_CACHE)/deps/$1
 endef
+
+define add_cache
+	mkdir -p $$(echo $1 | sed 's/\/[^\/]*$$//g') && touch -m $1
+endef

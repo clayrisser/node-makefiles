@@ -15,3 +15,8 @@ NPM := $(shell pnpm --version >$(NULL) 2>&1 && echo pnpm|| (yarn --version >$(NU
 NOFAIL := 2>$(NULL)|| true
 
 .EXPORT_ALL_VARIABLES:
+
+DONE := node_modules/.make
+define done
+mkdir -p $(DONE) && touch -m $(DONE)/$1
+endef

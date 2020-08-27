@@ -16,7 +16,19 @@ NOFAIL := 2>$(NULL)|| true
 
 .EXPORT_ALL_VARIABLES:
 
-DONE := node_modules/.make
+DONE := $(MAKE_CACHE)/done
 define done
-mkdir -p $(DONE) && touch -m $(DONE)/$1
+	mkdir -p $(DONE) && touch -m $(DONE)/$1
+endef
+
+define add_dep
+	mkdir -p $(MAKE_CACHE)/deps && echo $2 >> $(MAKE_CACHE)/deps/$1
+endef
+
+define reset_deps
+	rm $(MAKE_CACHE)/deps/$1
+endef
+
+define get_deps
+	cat $(MAKE_CACHE)/deps/$1
 endef

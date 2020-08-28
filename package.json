@@ -1,6 +1,6 @@
 {
   "name": "makefiles",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "cross platform gnu make for nodejs",
   "keywords": [
     "makefiles"
@@ -17,8 +17,9 @@
     "url": "https://codejam.ninja"
   },
   "files": [
+    "bin",
     "lib",
-    "bin"
+    "makefiles.mk"
   ],
   "main": "lib/index.js",
   "bin": {

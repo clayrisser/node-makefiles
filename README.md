@@ -6,40 +6,33 @@
 
 Please ★ this repo if you found it useful ★ ★ ★
 
-
 ## Installation
 
 ```sh
 npm install --save makefiles
 ```
 
-
 ## Dependencies
 
-* [NodeJS](https://nodejs.org)
-* [GNU Make](https://www.gnu.org/software/make)
-* [GNU Coreutils](https://www.gnu.org/software/coreutils)
-
+- [NodeJS](https://nodejs.org)
+- [GNU Make](https://www.gnu.org/software/make)
+- [GNU Coreutils](https://www.gnu.org/software/coreutils)
 
 ## Usage
 
 [Contribute](https://github.com/codejamninja/makefiles/blob/master/CONTRIBUTING.md) usage docs
 
-
 ## Support
 
 Submit an [issue](https://github.com/codejamninja/makefiles/issues/new)
-
 
 ## Screenshots
 
 [Contribute](https://github.com/codejamninja/makefiles/blob/master/CONTRIBUTING.md) a screenshot
 
-
 ## Contributing
 
 Review the [guidelines for contributing](https://github.com/codejamninja/makefiles/blob/master/CONTRIBUTING.md)
-
 
 ## License
 
@@ -47,16 +40,13 @@ Review the [guidelines for contributing](https://github.com/codejamninja/makefil
 
 [Jam Risser](https://codejam.ninja) © 2020
 
-
 ## Changelog
 
 Review the [changelog](https://github.com/codejamninja/makefiles/blob/master/CHANGELOG.md)
 
-
 ## Credits
 
-* [Jam Risser](https://codejam.ninja) - Author
-
+- [Jam Risser](https://codejam.ninja) - Author
 
 ## Support on Liberapay
 

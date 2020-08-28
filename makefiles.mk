@@ -16,6 +16,8 @@ NOFAIL := 2>$(NULL)|| true
 
 .EXPORT_ALL_VARIABLES:
 
+DEPSLIST := node_modules/.bin/depslist
+
 MAKE_CACHE := node_modules/.make
 
 DONE := $(MAKE_CACHE)/done

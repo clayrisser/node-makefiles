@@ -30,7 +30,7 @@ define add_dep
 endef
 
 define reset_deps
-	rm $(MAKE_CACHE)/deps/$1
+	rm $(MAKE_CACHE)/deps/$1 $(NOFAIL)
 endef
 
 define get_deps

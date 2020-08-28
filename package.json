@@ -1,6 +1,6 @@
 {
   "name": "makefiles",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "cross platform gnu make for nodejs",
   "keywords": [
     "makefiles"

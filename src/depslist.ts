@@ -24,7 +24,8 @@ export default class DepsList {
     let revList: string[] = [];
     await Promise.all(
       this.files.map(async (file: string) => {
-        revList = [...revList, ...(await this.revDep(file))];
+        const list = await this.revDep(file);
+        revList = [...revList, ...list];
       })
     );
     return [...new Set(revList)];

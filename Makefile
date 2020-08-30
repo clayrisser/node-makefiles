@@ -78,7 +78,7 @@ lib: node_modules/.tmp/coverage/lcov.info $(shell $(GIT) ls-files)
 
 .PHONY: start
 start:
-	@babel-node --extensions '.ts,.tsx' src src/index.ts $(ARGS)
+	@babel-node --extensions '.ts,.tsx' src src/index.ts --reverse $(ARGS)
 
 .PHONY: purge
 purge: clean

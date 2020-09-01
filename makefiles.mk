@@ -34,7 +34,7 @@ define reset_deps
 endef
 
 define get_deps
-	cat $(MAKE_CACHE)/deps/$1
+	cat $(MAKE_CACHE)/deps/$1 $(NOFAIL)
 endef
 
 define add_cache

@@ -9,6 +9,10 @@ else
   SHELL := $(shell bash --version >$(NULL) 2>&1 && echo bash|| echo sh)
 endif
 
+ifeq ($(CWD),)
+  CWD := $(shell pwd)
+endif
+
 CD := cd
 GIT := $(shell git --version >$(NULL) 2>&1 && echo git|| echo true)
 NPM := $(shell pnpm --version >$(NULL) 2>&1 && echo pnpm|| (yarn --version >$(NULL) 2>&1 && echo yarn|| echo npm))

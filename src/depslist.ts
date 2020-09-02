@@ -13,6 +13,10 @@ export default class DepsList {
 
   private allRevDepsMap: DepsMap = {};
 
+  private loadingResolvers: (() => any)[] = [];
+
+  private loadingDepCruise = false;
+
   async list(): Promise<string[]> {
     return (await depCruise(...this.files)).modules
       .filter((value: any) => {
@@ -71,14 +75,21 @@ export default class DepsList {
 
   async depCruise() {
     if (this.depCruiseCache) return this.depCruiseCache;
-    const depCruiseCache = await depCruise();
-    depCruiseCache.modules = depCruiseCache.modules.filter((value: any) => {
-      return (
-        value.source.indexOf('node_modules/') <= -1 &&
-        /\.(j|t)sx?/.test(value.source)
-      );
-    });
-    this.depCruiseCache = depCruiseCache;
+    if (this.loadingDepCruise) {
+      await new Promise((resolve) => this.loadingResolvers.push(resolve));
+    } else {
+      this.loadingDepCruise = true;
+      const depCruiseCache = await depCruise();
+      depCruiseCache.modules = depCruiseCache.modules.filter((value: any) => {
+        return (
+          value.source.indexOf('node_modules/') <= -1 &&
+          /\.(j|t)sx?/.test(value.source)
+        );
+      });
+      this.depCruiseCache = depCruiseCache;
+      this.loadingResolvers.forEach((resolve: () => any) => resolve());
+      this.loadingDepCruise = false;
+    }
     return this.depCruiseCache;
   }
 }

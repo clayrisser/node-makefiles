@@ -6,7 +6,7 @@ ifeq ($(PLATFORM), win32)
 	SHELL = cmd.exe
 else
 	NULL := /dev/null
-  SHELL = $(shell bash --version >$(NULL) 2>&1 && echo bash|| echo sh)
+  SHELL := $(shell bash --version >$(NULL) 2>&1 && echo bash|| echo sh)
 endif
 
 ifeq ($(CWD),)

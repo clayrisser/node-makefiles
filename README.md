@@ -4,6 +4,8 @@
 
 > makefiles for nodejs
 
+![](assets/node-makefiles.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 ## Installation
